@@ -1,0 +1,53 @@
+
+*{
+	margin:0;
+	font-family: 'Roboto', sans-serif;
+}
+
+.button{
+	user-select: none; 
+	border: 1px solid black;
+	display: inline-block;
+	width: 4rem;
+	height: 2.8rem;
+	vertical-align: center;
+	line-height: 3rem;
+	margin:2px;
+	box-shadow: 0px 2px #888888;
+	background: white;
+
+	
+}
+.button:active{
+	transform: translate(0px, 2px );
+	box-shadow: none;
+
+}
+
+#body{
+	margin: 5rem 0 0 5rem;
+	border: 1px solid black;
+	width:20rem;
+
+	text-align: center;
+	background:rgb(223, 200, 157);
+	box-shadow: 0px 3px #756237;
+}
+
+#display{
+	width: 88%;
+	height: 3rem;
+	display: inline-block;
+	border: 1px solid black;
+	text-align: right;
+	line-height: 3rem;
+	font-size: 2.5rem;
+	vertical-align: middle;
+	margin: 1rem 1rem;
+
+	background: white;
+}
+
+.buttonHolder{
+	margin: 1rem 0;
+}
