@@ -1,0 +1,13 @@
+
+
+create all buttons - html
+foreach button when click, if Number add to tempNum,
+else if symbol, push symbol's corresponding function to entries to execute later:
+	AC => (all clear) clear tempNum and entries
+	CE => (clear (last) entry) clear tempNum but does not clear entries
+	x => pushes multiply to entries
+	+ => pushes plus action to entries
+	- => pushes minus action to entries
+	/	=> pushes divide action to entries
+	=	=> Execute/calculate the result by iterating through entries. Updates tempNum
+After each action re-render the display screen to show most updated version of the tempNum
