@@ -21,10 +21,11 @@
 .button:active{
 	transform: translate(0px, 2px );
 	box-shadow: none;
-
 }
 
 #body{
+	
+	user-select: none; 
 	margin: 5rem 0 0 5rem;
 	border: 1px solid black;
 	width:20rem;
@@ -35,6 +36,7 @@
 }
 
 #display{
+	/* user-select: default;  */
 	width: 88%;
 	height: 3rem;
 	display: inline-block;
