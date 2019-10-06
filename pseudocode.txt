@@ -1,0 +1,13 @@
+
+
+create all buttons - html
+foreach button when click, if Number add to numberHolder,
+else if symbol, push symbol's corresponding function to actionList to execute later:
+	AC => (all clear) clear numberHolder and actionsList
+	CE => (clear (last) entry) clear numberHolder but does not clear actionsList
+	x => pushes multiplay actionList
+	+ => pushes plus action to actionList
+	- => pushes minus action to actionList
+	/	=> pushes divide action to actionList
+	=	=> Execute/calculate the result by iterating through numberHolder and actionList
+After each action re-render the display screen to show most updated version of the numberHolder
