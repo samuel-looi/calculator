@@ -19,6 +19,7 @@ function buttonPressed(keyPressed){
 	// Check if display character, not command
 	if(!isNaN(keyPressed) || keyPressed==='.'){
 		// DISPLAYABLE TEXT
+
 		if(clearNextTick){
 			displayNum='';
 			clearNextTick=0;
@@ -32,20 +33,16 @@ function buttonPressed(keyPressed){
 
 		// COMMANDS
 		if(keyPressed === 'AC'){
-			console.log('AC')
 			displayNum='';
 			entries=[];
 		}else if(keyPressed === 'CE'){
-			console.log('ce')
 			displayNum='';
 		}else if(keyPressed === '=>'){
-			console.log('->')
 			let newString='';
 			for(let i=0;i<displayNum.length-1;i++){
 				newString+=displayNum[i];
 			}
 			displayNum = newString;
-			console.log(newString)
 		}else{
 			//Check operators
 			checkOperators(keyPressed);
@@ -66,23 +63,16 @@ function checkOperators(keyPressed){
 	// Don't do anything if "=" is pressed before any other operator command
 	if(entries.length>0 && displayNum===''){
 		entries[entries.length-1]=keyPressed;
-		console.log('yeah!')
-	}else{
-		console.log('wa')
 	}
 	console.log('entries2',entries)
 	if(!(keyPressed === '=' && entries.length===0)){
 		entries.push(displayNum);
 		entries.push(keyPressed);
 		// displayNum='';
-		console.log('entries',entries)
-		console.log('waaaaaaaa')
 
 		if(keyPressed === '='){
-			console.log('=')
 			displayNum = calculate();
 			entries = [];
-			console.log('stop!')
 		}
 		clearNextTick=true;
 	}
@@ -101,14 +91,14 @@ function calculate(){
 				netResult/=entries[i+2];
 				break;
 			case 'x':
-					netResult*=entries[i+2];
-					break;
+				netResult*=entries[i+2];
+				break;
 			case '-':
-					netResult-=entries[i+2];
-					break;
+				netResult-=entries[i+2];
+				break;
 			case '+':
-					netResult=~~(netResult)+~~(entries[i+2]);
-					break;
+				netResult=~~(netResult)+~~(entries[i+2]);
+				break;
 		}
 	}
 	
